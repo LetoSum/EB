@@ -1,0 +1,62 @@
+﻿<div class="ui-publisher-dialog" ng-controller="SortableController">
+    <form id="formSortable">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div>
+                            <input type="submit" value="Вернуться назад" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div>
+                            <input type="submit" value="Сохранить" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="u2">
+                            <select id="u2_input">
+                                <option value="Category 1">Category 1</option>
+                                <option value="Category2">Category2</option>
+                            </select>
+                        </div>
+
+                        <div id="u0">
+                            <select id="u0_input" size="2">
+                                <option value="Phone1">Phone1</option>
+                                <option value="Phone 2">Phone 2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div id="u3">
+                            <select id="u3_input">
+                                <option ng-repeat="category in $root.categories" value="category">category</option>
+                            </select>
+
+                            <div id="u1">
+                                <select id="u1_input" size="2">
+                                    <option value="Phone 1">Phone 1</option>
+                                    <option value="Phone 2">Phone 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-success" ng-click="successPhone()">Сохранить</button>
+                    <button type="button" class="btn btn-warning" ng-click="cancel()">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="ui-overlay"></div>

@@ -1,0 +1,20 @@
+﻿<div class="ui-publisher-dialog" ng-controller="CategoryController">
+    <form>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Panel title</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="name">Наименование</label>
+                    <input id="name" type="text" class="form-control" placeholder="Наименование категории" ng-model="addCatName">
+                </div>
+            </div>
+            <div class="panel-footer">
+                <button type="submit" class="btn btn-success" ng-click="addCat(addCatName)">Добавить</button>
+                <button type="button" class="btn btn-warning" ng-click="cancel()">Отмена</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="ui-overlay"></div>

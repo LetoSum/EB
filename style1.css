@@ -1,0 +1,45 @@
+h4{
+	color: honeydew;
+	position:relative;
+	top: 175px;
+}
+
+.brd{
+	background: lavender;
+	position : relative;
+	height: 117px;
+	top: -20px;
+	text-align: center;
+}
+
+h1{
+	position: relative;
+	top: 40px;
+	color: blue;
+	text-align: center;
+	font-style: italic;
+}
+td,tr{
+	width:8%;
+}
+#verh{
+	font-size: 20px;
+	font-weight: bold;
+}
+.ftr{
+	background: lavender;
+	position : relative;
+	height: 117px;
+	top: 300px;
+	text-align: center;
+}
+
+
+tr:hover {
+	transition: 0.4s;
+	transform: scaleX(1.05) scaleY(1.2);
+}
+
+.table {
+	margin-top: 10px;
+}

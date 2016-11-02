@@ -1,0 +1,48 @@
+.element-shift-top-10 {
+    margin-top: 10px;
+}
+
+.element-shift-top-20 {
+    margin-top: 20px;
+}
+
+.ui-publisher-dialog {
+    position: absolute;
+    min-width: 30%;
+    top: 0;
+    left: 50%;
+    z-index: 2000;
+    -ms-opacity: 0;
+    opacity: 0;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    -moz-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    -ms-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    -o-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+    transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+
+    .ui-publisher-dialog.show {
+        top: 50%;
+        -ms-opacity: 1;
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+.ui-overlay {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1999;
+}

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>БМЗ</title>
+    <link href="Scripts/Content/bootstrap.css" rel="stylesheet" />
+    <link href="Scripts/Content/tree-control.css" rel="stylesheet" />
+    <link href="Scripts/Content/tree-control-attribute.css" rel="stylesheet" />
+    <link href="Scripts/Content/default-theme.css" rel="stylesheet" />
+    <link href="style1.css" rel="stylesheet"/>
+</head> 
+<header class="brd">
+<h1>Электронная торговая площадка ООО "Садовая Коллекция"</h1></header>
+ <body ng-app="application">
+<div class="container-fluid" ng-controller="HomeController">
+<div class="row element-shift-top-10">
+<div class="col-lg-12">
+<button type="button" class="btn btn-default" ng-click="addPhone()">Добавить элемент</button>
+<button type="button" class="btn btn-default" ng-click="addCategory()">Добавить категорию</button>
+</div>
+</div>
+<div class="row element-shift-top-20">
+<div class="col-lg-3">
+<div treecontrol class="tree-light" tree-model="treeData" options="treeOptions" on-selection="showSelected(node)" selected-node="node1">
+                    {{node.name}}
+                </div>
+                <div class="container-fluid">
+                    <div class="row element-shift-top-10">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default" ng-click="remove()">Удалить</button>
+                            <button type="button" class="btn btn-default" ng-click="edit()">Редактировать</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="active">
+                            <th>#</th>
+                            <th>Название товара</th>
+                            <th>Описание</th>
+                            <th>Год поставки</th>
+                            <th>Категория</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat="phone in phones">
+                        <tr class="{{phone.selected ? 'active' : ''}}" ng-click="select(phone)">
+                            <td>{{phone.id}}</td>
+                            <td>{{phone.name}}</td>
+                            <td>{{phone.description}}</td>
+                            <td>{{phone.photoUrl}}</td>
+                            <td>{{phone.category}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div ng-view></div>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/angular-tree-control.js"></script>
+    <script src="Scripts/app.js"></script>
+  <footer class="ftr">
+<table border="0" align="center">
+   <caption></caption>
+   <tr id="verh">
+    <td>О сайте</td>
+    <td>Контакты</td>
+    <td>О компании</td>
+   </tr>
+   <tr><td>Помощь</td><td>Электронная почта</td><td>Вакансии</td></tr>
+   <tr><td>Борьба с ошибками</td><td>Номера телефонов</td><td>История</td></tr>
+  </table>
+  </footer>
+ </body> 
+</html>
